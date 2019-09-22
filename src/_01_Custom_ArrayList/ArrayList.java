@@ -1,13 +1,20 @@
 package _01_Custom_ArrayList;
 
+import java.util.List;
+
 @SuppressWarnings("unchecked")
 
 public class ArrayList <T>{
+	//private ArrayList<T> array=new ArrayList<T>();
+	List <T> list;
 	
 	public ArrayList() {
+		
+		list = (List<T>) new Object();
 	}
 	
 	public T get(int loc) throws IndexOutOfBoundsException {
+		//array.add((T[])loc);
 		
 		return null;
 	}

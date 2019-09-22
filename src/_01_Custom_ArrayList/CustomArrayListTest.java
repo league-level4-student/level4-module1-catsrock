@@ -111,7 +111,7 @@ public class CustomArrayListTest {
 		list.add("only");
 		list.add("a");
 		list.add("test");
-
+		
 		assertTrue(list.size() == 5);
 		
 		ArrayList<Integer> list2 = new ArrayList<Integer>();
