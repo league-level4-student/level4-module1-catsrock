@@ -6,21 +6,40 @@ import java.util.List;
 
 public class ArrayList <T>{
 	//private ArrayList<T> array=new ArrayList<T>();
-	List <T> list;
+	 T[] list;
 	
 	public ArrayList() {
 		
-		list = (List<T>) new Object();
+		list = (T[])new Object[0];
 	}
 	
 	public T get(int loc) throws IndexOutOfBoundsException {
-		//array.add((T[])loc);
 		
-		return null;
+		if (loc < 0 || loc >= list.length) throw new IndexOutOfBoundsException();
+		
+			return list[loc];
+		/*
+			if (loc>=0|| loc<=list.length) {
+				return list[loc];
+			}
+			else {
+				throw new IndexOutOfBoundsException();
+			}*/
+		
 	}
 	
 	public void add(T val) {
 		
+		T[] newList= (T[]) new Object[list.length + 1 ];
+		
+		for (int i = 0; i < list.length; i++) {
+			
+			newList[i]=list[i];
+		}
+		
+		newList[list.length] = val;
+		
+		list = newList;
 	}
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
